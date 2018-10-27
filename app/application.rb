@@ -5,10 +5,10 @@
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
-      items_list = req.path.split("/items/").last #turn /songs/Sorry into Sorry
-      song = @@songs.find{|s| s.title == song_title}
+      items_list = req.path.split("/items/").last
+      song = @@items.find{|s| s.item == items_list}
  
-      resp.write song.artist
+      resp.write item.artist
     end
       
       
