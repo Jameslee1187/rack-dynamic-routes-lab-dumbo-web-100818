@@ -8,8 +8,9 @@
       items_list = req.path.split("/items/").last
       song = @@items.find{|s| s.item == items_list}
  
-      resp.write item.artist
+      resp.write item.price
     end
+  else
       
       
       
